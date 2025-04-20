@@ -210,6 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
     });
+    
+    // Load other projects from JSON
+    loadOtherProjects();
 });
 
 // Add animation for tool cards
@@ -232,5 +235,155 @@ toolAnimation.textContent = `
             transform: translateY(0);
         }
     }
+
+    .error-message {
+        color: #ff6b6b;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+        background: rgba(255, 107, 107, 0.1);
+        border-radius: 10px;
+        margin: 2rem 0;
+    }
 `;
 document.head.appendChild(toolAnimation); 
+
+// Function to load projects from JSON file
+function loadOtherProjects() {
+    console.log('Loading other projects...');
+    
+    // Manually add the projects from the JSON data
+    const projectsData = [
+        {
+            "title": "Elite Hearts – Healthcare Experience",
+            "description": "Elite Hearts is a web-based platform designed to simplify healthcare access for patients. From instant doctor consultations to quick appointment bookings, the platform eliminates typical hospital wait-time frustration through clean UI and thoughtful flows.",
+            "image": "assets/Elitefinal.png",
+            "alt": "Elite Hearts Healthcare App",
+            "highlights": [
+                "Direct Doctor Consultations",
+                "One-Click Appointments",
+                "User-First Design"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/elite-hearts-a-seamless-healthcare-experience-79f215fb23a8",
+            "icons": ["fas fa-user-md", "fas fa-calendar-check", "fas fa-heartbeat"]
+        },
+        {
+            "title": "UX Strategy Breakdown – Zepto",
+            "description": "This case study explores how Zepto crafts an ultra-fast, intuitive grocery delivery experience. I deep-dived into the product's UX strategies — from their location-first approach to the seamless cart flow — analyzing how micro-decisions create a sense of urgency, trust, and convenience for the user.",
+            "image": "assets/zepto.png",
+            "alt": "Zepto UX Case Study",
+            "highlights": [
+                "Location-First Approach",
+                "Speed-Driven UX",
+                "Trust Through Microcopy"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/heres-my-observation-on-zepto-s-ux-strategyical-decisions-1cd23fe04bb3",
+            "icons": ["fas fa-map-marker-alt", "fas fa-bolt", "fas fa-check-circle"]
+        },
+        {
+            "title": "Sudha Boat Tour – Travel Booking Platform",
+            "description": "Sudha Boat Tour is an intuitive travel booking platform designed to simplify boat trip planning around scenic locations like Papikondalu and Bhadrachalam. With a streamlined booking form, real-time trip pricing, and night-stay packages, it ensures a smooth and informative user experience — even for first-time travelers.",
+            "image": "assets/Boat travelsfinal.png",
+            "alt": "Sudha Boat Tour App",
+            "highlights": [
+                "Easy Booking Form",
+                "Transparent Pricing",
+                "Destination Packages"
+            ],
+            "caseStudyLink": "https://www.figma.com",
+            "icons": ["fas fa-ship", "fas fa-tags", "fas fa-map-marked-alt"]
+        },
+        {
+            "title": "MechanoHub – One Stop for Mechanical Engineers",
+            "description": "MechanoHub is a community-based mobile application tailored for mechanical engineering students. Designed to bring everything under one roof — from academic resources to career opportunities — it bridges the gap between classroom learning and real-world growth.",
+            "image": "assets/Mechanofinal.png",
+            "alt": "MechanoHub App",
+            "highlights": [
+                "Department-Centric Platform",
+                "Centralized Learning",
+                "Community Driven"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/mechanohub-5d15dac6f0b2",
+            "icons": ["fas fa-tools", "fas fa-book", "fas fa-users"]
+        },
+        {
+            "title": "Tour Booking Web UI – My First Design Exploration",
+            "description": "This single-page design was one of my earliest steps into UI/UX. Built to simplify tour bookings, it features clean form structures, structured pricing sections, and engaging visuals — all inspired by real-world use cases. It marked the beginning of my journey toward meaningful and user-friendly design.",
+            "image": "assets/bike dark 2.jpg",
+            "alt": "Tour Booking Web UI",
+            "highlights": [
+                "Early Learning",
+                "Real-World Inspiration",
+                "Growth Journey"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/its-a-short-story-because-i-haven-t-completed-the-whole-design-for-this-web-application-677b5e6baa2b",
+            "icons": ["fas fa-lightbulb", "fas fa-compass", "fas fa-heart"]
+        }
+    ];
+
+    const projectsContainer = document.getElementById('other-projects-container');
+    const projectTemplate = document.getElementById('project-template');
+    const highlightTemplate = document.getElementById('highlight-template');
+    
+    if (!projectsContainer || !projectTemplate || !highlightTemplate) {
+        console.error('Required templates or container not found');
+        return;
+    }
+    
+    // Clear any existing content
+    projectsContainer.innerHTML = '';
+    
+    // Create project cards for each project
+    projectsData.forEach((project, index) => {
+        // Clone the project template
+        const projectCard = document.importNode(projectTemplate.content, true).querySelector('.project-card');
+        
+        // Set project image
+        const img = projectCard.querySelector('.project-image img');
+        img.src = project.image;
+        img.alt = project.alt;
+        
+        // Set project title and description
+        projectCard.querySelector('.project-title').textContent = project.title;
+        projectCard.querySelector('.project-description').textContent = project.description;
+        
+        // Add highlights
+        const highlightsContainer = projectCard.querySelector('.project-highlights');
+        project.highlights.forEach((highlight, idx) => {
+            const highlightItem = document.importNode(highlightTemplate.content, true).querySelector('.highlight-item');
+            
+            // Set icon and text
+            const icon = highlightItem.querySelector('i');
+            icon.className = project.icons[idx] || 'fas fa-check';
+            
+            highlightItem.querySelector('span').textContent = highlight;
+            highlightsContainer.appendChild(highlightItem);
+        });
+        
+        // Set link
+        const link = projectCard.querySelector('.view-project');
+        link.href = project.caseStudyLink;
+        
+        // Determine link text based on URL
+        const linkText = project.caseStudyLink.includes('figma.com') ? 'View Design File' : 'Read Full Case Study';
+        link.querySelector('.link-text').textContent = linkText;
+        
+        // Add to container with staggered animation
+        projectsContainer.appendChild(projectCard);
+        
+        // Add animation with delay
+        setTimeout(() => {
+            projectCard.style.opacity = '1';
+            projectCard.style.transform = 'translateY(0)';
+        }, 100 * (index + 1));
+    });
+    
+    console.log('All project cards created successfully');
+}
+
+// Ensure the projects are loaded when the script runs
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadOtherProjects);
+} else {
+    loadOtherProjects();
+}

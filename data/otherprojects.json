@@ -1,0 +1,64 @@
+{
+    "projects": [
+        {
+            "title": "Elite Hearts – Healthcare Experience",
+            "description": "Elite Hearts is a web-based platform designed to simplify healthcare access for patients. From instant doctor consultations to quick appointment bookings, the platform eliminates typical hospital wait-time frustration through clean UI and thoughtful flows.",
+            "image": "assets/otherprojects/Elitefinal.png",
+            "alt": "Elite Hearts Healthcare App",
+            "highlights": [
+                "Direct Doctor Consultations",
+                "One-Click Appointments",
+                "User-First Design"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/elite-hearts-a-seamless-healthcare-experience-79f215fb23a8"
+        },
+        {
+            "title": "UX Strategy Breakdown – Zepto",
+            "description": "This case study explores how Zepto crafts an ultra-fast, intuitive grocery delivery experience. I deep-dived into the product's UX strategies — from their location-first approach to the seamless cart flow — analyzing how micro-decisions create a sense of urgency, trust, and convenience for the user.",
+            "image": "assets/otherprojects/zepto.png",
+            "alt": "Zepto UX Case Study",
+            "highlights": [
+                "Location-First Approach",
+                "Speed-Driven UX",
+                "Trust Through Microcopy"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/heres-my-observation-on-zepto-s-ux-strategyical-decisions-1cd23fe04bb3"
+        },
+        {
+            "title": "Sudha Boat Tour – Travel Booking Platform",
+            "description": "Sudha Boat Tour is an intuitive travel booking platform designed to simplify boat trip planning around scenic locations like Papikondalu and Bhadrachalam. With a streamlined booking form, real-time trip pricing, and night-stay packages, it ensures a smooth and informative user experience — even for first-time travelers.",
+            "image": "assets/otherprojects/Boat travelsfinal.png",
+            "alt": "Sudha Boat Tour App",
+            "highlights": [
+                "Easy Booking Form",
+                "Transparent Pricing",
+                "Destination Packages"
+            ],
+            "caseStudyLink": "https://www.figma.com"
+        },
+        {
+            "title": "MechanoHub – One Stop for Mechanical Engineers",
+            "description": "MechanoHub is a community-based mobile application tailored for mechanical engineering students. Designed to bring everything under one roof — from academic resources to career opportunities — it bridges the gap between classroom learning and real-world growth.",
+            "image": "assets/otherprojects/Mechanofinal.png",
+            "alt": "MechanoHub App",
+            "highlights": [
+                "Department-Centric Platform",
+                "Centralized Learning",
+                "Community Driven"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/mechanohub-5d15dac6f0b2"
+        },
+        {
+            "title": "Tour Booking Web UI – My First Design Exploration",
+            "description": "This single-page design was one of my earliest steps into UI/UX. Built to simplify tour bookings, it features clean form structures, structured pricing sections, and engaging visuals — all inspired by real-world use cases. It marked the beginning of my journey toward meaningful and user-friendly design.",
+            "image": "assets/otherprojects/bike dark 2.jpg",
+            "alt": "Tour Booking Web UI",
+            "highlights": [
+                "Early Learning",
+                "Real-World Inspiration",
+                "Growth Journey"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/its-a-short-story-because-i-haven-t-completed-the-whole-design-for-this-web-application-677b5e6baa2b"
+        }
+    ]
+}  
