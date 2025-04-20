@@ -377,6 +377,9 @@ body {
     -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: var(--accent) transparent; /* For Firefox */
+    white-space: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%; /* Ensure full width */
 }
 
 /* Customize scrollbar for webkit browsers */
@@ -408,8 +411,10 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    flex: 0 0 400px; /* Increased width for each card */
+    flex: 0 0 400px; /* Fixed width for each card */
+    min-width: 400px; /* Ensure minimum width */
     scroll-snap-align: start; /* Snap to grid when scrolling */
+    display: inline-block; /* Ensure horizontal layout */
 }
 
 .project-card:hover {
@@ -463,6 +468,21 @@ body {
 
 .project-content {
     padding: 1.5rem;
+    white-space: normal;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    white-space: normal;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    white-space: normal;
 }
 
 .project-highlights {
@@ -950,6 +970,66 @@ footer {
         width: 40px;
         height: 40px;
     }
+
+    /* Ensure project cards stay horizontal on mobile */
+    .projects-grid-container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100% !important;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 20px; /* Add padding for scrollbar */
+    }
+
+    .project-card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        margin-right: 1rem;
+        display: inline-block !important;
+        white-space: normal;
+        height: auto !important;
+    }
+
+    /* Fix project card content wrapping */
+    .project-card {
+        white-space: normal !important;
+    }
+
+    .project-content {
+        white-space: normal !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .project-title {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: initial !important;
+    }
+
+    .project-description {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: initial !important;
+    }
+
+    .project-highlights {
+        white-space: normal !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    .highlight-item {
+        flex: 0 0 auto !important;
+        white-space: normal !important;
+    }
+
+    /* Ensure images maintain aspect ratio */
+    .project-image img {
+        height: 200px !important;
+        object-fit: cover !important;
+    }
 }
 
 .hero-text p.info-description {
@@ -1186,4 +1266,4 @@ h1.glitch {
 
 h2.animate-text-delay {
     font-weight: 600;
-} 
+}
