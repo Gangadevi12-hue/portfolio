@@ -217,7 +217,7 @@ body {
 }
 
 .blob-shape:hover img {
-    filter: grayscale(0%) contrast(100%) blur(0px);
+    filter: grayscale(70%) contrast(120%) blur(1px);
 }
 
 .floating-details {
