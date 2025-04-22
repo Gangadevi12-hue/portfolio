@@ -549,9 +549,12 @@ body {
 }
 
 .project-mockup img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 820px; /* Set a consistent height for all mockup images */
+    object-fit: fill; /* This ensures the image covers the area without distortion */
+    object-position: top; /* Centers the image */
     display: block;
+    transition: transform 0.3s ease;
 }
 
 .mockup-overlay {
