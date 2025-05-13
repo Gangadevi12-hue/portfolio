@@ -1,16 +1,27 @@
 {
     "projects": [
         {
-            "title": "Elite Hearts – Healthcare Experience",
-            "description": "Elite Hearts is a web-based platform designed to simplify healthcare access for patients. From instant doctor consultations to quick appointment bookings, the platform eliminates typical hospital wait-time frustration through clean UI and thoughtful flows.",
-            "image": "assets/otherprojects/Elitefinal.png",
-            "alt": "Elite Hearts Healthcare App",
+            "title" : "You can Learn - Learning app for UI/UX Designers",
+            "description": "You can Learn is a user-centric learning app designed specifically for aspiring UI/UX designers. It offers a structured pathway to master design principles, tools, and trends, while personalized suggestions help learners stay on track and improve continuously. The app focuses on making the learning journey smooth, interactive, and adaptive to individual goals.",
+            "image": "assets/otherprojects/you_can_learn_mockup.png",
+            "alt" : "You can Learn App",
             "highlights": [
-                "Direct Doctor Consultations",
-                "One-Click Appointments",
-                "User-First Design"
+                "Structured Learning",
+                "Automated Suggestions"
             ],
-            "caseStudyLink": "https://medium.com/@Gangadevi12/elite-hearts-a-seamless-healthcare-experience-79f215fb23a8"
+            "caseStudyLink": "https://medium.com/@Gangadevi12/wants-to-be-honest-5e1fcc4f16fb"
+        },
+        {
+            "title": "MechanoHub – One Stop for Mechanical Engineers",
+            "description": "MechanoHub is a community-based mobile application tailored for mechanical engineering students. Designed to bring everything under one roof — from academic resources to career opportunities — it bridges the gap between classroom learning and real-world growth.",
+            "image": "assets/otherprojects/mechanoHubMockup.png",
+            "alt": "MechanoHub App",
+            "highlights": [
+                "Department-Centric Platform",
+                "Centralized Learning",
+                "Community Driven"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/mechanohub-5d15dac6f0b2"
         },
         {
             "title": "UX Strategy Breakdown – Zepto",
@@ -37,18 +48,6 @@
             "caseStudyLink": "https://www.figma.com"
         },
         {
-            "title": "MechanoHub – One Stop for Mechanical Engineers",
-            "description": "MechanoHub is a community-based mobile application tailored for mechanical engineering students. Designed to bring everything under one roof — from academic resources to career opportunities — it bridges the gap between classroom learning and real-world growth.",
-            "image": "assets/otherprojects/Mechanofinal.png",
-            "alt": "MechanoHub App",
-            "highlights": [
-                "Department-Centric Platform",
-                "Centralized Learning",
-                "Community Driven"
-            ],
-            "caseStudyLink": "https://medium.com/@Gangadevi12/mechanohub-5d15dac6f0b2"
-        },
-        {
             "title": "Tour Booking Web UI – My First Design Exploration",
             "description": "This single-page design was one of my earliest steps into UI/UX. Built to simplify tour bookings, it features clean form structures, structured pricing sections, and engaging visuals — all inspired by real-world use cases. It marked the beginning of my journey toward meaningful and user-friendly design.",
             "image": "assets/otherprojects/bike dark 2.jpg",
@@ -59,6 +58,18 @@
                 "Growth Journey"
             ],
             "caseStudyLink": "https://medium.com/@Gangadevi12/its-a-short-story-because-i-haven-t-completed-the-whole-design-for-this-web-application-677b5e6baa2b"
+        },
+        {
+            "title": "Elite Hearts – Healthcare Experience",
+            "description": "Elite Hearts is a web-based platform designed to simplify healthcare access for patients. From instant doctor consultations to quick appointment bookings, the platform eliminates typical hospital wait-time frustration through clean UI and thoughtful flows.",
+            "image": "assets/otherprojects/Elitefinal.png",
+            "alt": "Elite Hearts Healthcare App",
+            "highlights": [
+                "Direct Doctor Consultations",
+                "One-Click Appointments",
+                "User-First Design"
+            ],
+            "caseStudyLink": "https://medium.com/@Gangadevi12/elite-hearts-a-seamless-healthcare-experience-79f215fb23a8"
         }
     ]
 }  
